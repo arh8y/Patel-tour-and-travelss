@@ -31,6 +31,7 @@
       <li><a href="#vehicles">Vehicles</a></li>
       <li><a href="#bikes">Bikes</a></li>
       <li><a href="#cars">Cars</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Book Now</a>
@@ -189,6 +190,652 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services-section" id="services">
+    <div class="services-header" data-reveal>
+      <div class="section-tag">What We Offer</div>
+      <h2 class="section-title">All Travel Services</h2>
+      <p class="services-sub">From a quick city ride to a full corporate tour — we handle it all.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card sc-hotel" data-reveal data-service="Hotel Booking" style="--sc:0">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🏨</span>
+          <div class="sc-glow" style="--gcol:#6c63ff"></div>
+        </div>
+        <h3>Hotel Booking</h3>
+        <p>Handpicked hotels across Dehradun, Mussoorie & beyond. Budget to luxury.</p>
+        <button class="sc-btn" onclick="openModal('modal-hotel')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-taxi" data-reveal data-service="Taxi Services" style="--sc:1">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🚕</span>
+          <div class="sc-glow" style="--gcol:#00d4ff"></div>
+        </div>
+        <h3>Taxi Services</h3>
+        <p>24/7 cab service — local transfers, airport drops, outstation trips.</p>
+        <button class="sc-btn" onclick="openModal('modal-taxi')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-tour" data-reveal data-service="Tour Package" style="--sc:2">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🗺️</span>
+          <div class="sc-glow" style="--gcol:#f5c842"></div>
+        </div>
+        <h3>Tour Package</h3>
+        <p>Customised tour packages for Uttarakhand, Himachal & North India.</p>
+        <button class="sc-btn" onclick="openModal('modal-tour')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-coach" data-reveal data-service="Luxury Coaches" style="--sc:3">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🚌</span>
+          <div class="sc-glow" style="--gcol:#ff6b35"></div>
+        </div>
+        <h3>Luxury Coaches</h3>
+        <p>Premium AC coaches for group travel, events & corporate outings.</p>
+        <button class="sc-btn" onclick="openModal('modal-coach')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-air" data-reveal data-service="Air Tickets" style="--sc:4">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">✈️</span>
+          <div class="sc-glow" style="--gcol:#00d4ff"></div>
+        </div>
+        <h3>Air Tickets</h3>
+        <p>Domestic & international flight bookings at the best available fares.</p>
+        <button class="sc-btn" onclick="openModal('modal-air')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-train" data-reveal data-service="Train Tickets" style="--sc:5">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🚆</span>
+          <div class="sc-glow" style="--gcol:#6c63ff"></div>
+        </div>
+        <h3>Train Tickets</h3>
+        <p>Confirmed train bookings, Tatkal & group quotas managed for you.</p>
+        <button class="sc-btn" onclick="openModal('modal-train')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-volvo" data-reveal data-service="Volvo Tickets" style="--sc:6">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🚍</span>
+          <div class="sc-glow" style="--gcol:#f5c842"></div>
+        </div>
+        <h3>Volvo Tickets</h3>
+        <p>AC Volvo sleeper & seater bookings — Delhi, Chandigarh, Shimla & more.</p>
+        <button class="sc-btn" onclick="openModal('modal-volvo')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-corp" data-reveal data-service="Corporate Service" style="--sc:7">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">💼</span>
+          <div class="sc-glow" style="--gcol:#ff6b35"></div>
+        </div>
+        <h3>Corporate Service</h3>
+        <p>End-to-end corporate travel management — fleets, hotels & team tours.</p>
+        <button class="sc-btn" onclick="openModal('modal-corp')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-car" data-reveal data-service="Car Rental" style="--sc:8">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🚘</span>
+          <div class="sc-glow" style="--gcol:#00d4ff"></div>
+        </div>
+        <h3>Car Rental</h3>
+        <p>Self-drive or chauffeur-driven cars — hatchbacks, sedans & SUVs.</p>
+        <button class="sc-btn" onclick="openModal('modal-car')">Book Now →</button>
+      </div>
+
+      <div class="service-card sc-bike" data-reveal data-service="Bike Rental" style="--sc:9">
+        <div class="sc-icon-wrap">
+          <span class="sc-icon">🛵</span>
+          <div class="sc-glow" style="--gcol:#f5c842"></div>
+        </div>
+        <h3>Bike Rental</h3>
+        <p>Scooties and bikes for local sightseeing and Mussoorie trips.</p>
+        <button class="sc-btn" onclick="openModal('modal-bike')">Book Now →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SERVICE BOOKING MODALS ===== -->
+
+  <!-- Hotel Booking Modal -->
+  <div class="modal-overlay" id="modal-hotel">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-hotel')">✕</button>
+      <div class="modal-icon">🏨</div>
+      <h3 class="modal-title">Hotel Booking</h3>
+      <p class="modal-sub">Fill the details — we'll confirm your booking on WhatsApp.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'hotel')">
+        <div class="mform-row">
+          <input type="text" id="h-name" placeholder="Full Name" required />
+          <input type="tel" id="h-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="h-city" placeholder="City / Hotel Name" required />
+          <input type="number" id="h-persons" placeholder="No. of Persons" min="1" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="h-checkin" required title="Check-in Date" />
+          <input type="date" id="h-checkout" required title="Check-out Date" />
+        </div>
+        <div class="mform-row">
+          <input type="number" id="h-rooms" placeholder="No. of Rooms" min="1" required />
+          <select id="h-type" required>
+            <option value="" disabled selected>Room Type</option>
+            <option>Budget</option>
+            <option>Standard</option>
+            <option>Deluxe</option>
+            <option>Luxury / Suite</option>
+          </select>
+        </div>
+        <textarea id="h-notes" placeholder="Any special requests..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-hotel"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Taxi Services Modal -->
+  <div class="modal-overlay" id="modal-taxi">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-taxi')">✕</button>
+      <div class="modal-icon">🚕</div>
+      <h3 class="modal-title">Taxi Services</h3>
+      <p class="modal-sub">Fill the details — we'll confirm your cab on WhatsApp.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'taxi')">
+        <div class="mform-row">
+          <input type="text" id="t-name" placeholder="Full Name" required />
+          <input type="tel" id="t-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="t-from" placeholder="Pickup Location" required />
+          <input type="text" id="t-to" placeholder="Drop Location" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="t-date" required title="Travel Date" />
+          <input type="time" id="t-time" required title="Pickup Time" />
+        </div>
+        <div class="mform-row">
+          <input type="number" id="t-persons" placeholder="No. of Passengers" min="1" required />
+          <select id="t-type" required>
+            <option value="" disabled selected>Cab Type</option>
+            <option>Hatchback</option>
+            <option>Sedan</option>
+            <option>SUV</option>
+            <option>Tempo Traveller</option>
+          </select>
+        </div>
+        <textarea id="t-notes" placeholder="Any other details..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-taxi"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tour Package Modal -->
+  <div class="modal-overlay" id="modal-tour">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-tour')">✕</button>
+      <div class="modal-icon">🗺️</div>
+      <h3 class="modal-title">Tour Package</h3>
+      <p class="modal-sub">Fill the details — we'll design your perfect tour.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'tour')">
+        <div class="mform-row">
+          <input type="text" id="tp-name" placeholder="Full Name" required />
+          <input type="tel" id="tp-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="tp-dest" placeholder="Destination" required />
+          <input type="number" id="tp-persons" placeholder="No. of Persons" min="1" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="tp-date" required title="Travel Date" />
+          <input type="number" id="tp-days" placeholder="No. of Days" min="1" required />
+        </div>
+        <select id="tp-type" required style="width:100%;margin-bottom:0">
+          <option value="" disabled selected>Package Type</option>
+          <option>Family Tour</option>
+          <option>Honeymoon Package</option>
+          <option>Group Tour</option>
+          <option>Adventure Tour</option>
+          <option>Pilgrimage Tour</option>
+          <option>Custom Package</option>
+        </select>
+        <textarea id="tp-notes" placeholder="Budget range or special requirements..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-tour"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Luxury Coaches Modal -->
+  <div class="modal-overlay" id="modal-coach">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-coach')">✕</button>
+      <div class="modal-icon">🚌</div>
+      <h3 class="modal-title">Luxury Coaches</h3>
+      <p class="modal-sub">Fill the details — we'll book your premium coach.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'coach')">
+        <div class="mform-row">
+          <input type="text" id="c-name" placeholder="Full Name" required />
+          <input type="tel" id="c-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="c-from" placeholder="From City" required />
+          <input type="text" id="c-to" placeholder="To City" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="c-date" required title="Travel Date" />
+          <input type="number" id="c-seats" placeholder="No. of Seats" min="1" required />
+        </div>
+        <select id="c-type" required>
+          <option value="" disabled selected>Coach Type</option>
+          <option>AC Seater</option>
+          <option>AC Sleeper</option>
+          <option>Non-AC</option>
+          <option>Mini Bus (20 seats)</option>
+          <option>Full Bus (40+ seats)</option>
+        </select>
+        <textarea id="c-notes" placeholder="Event / trip details..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-coach"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Air Tickets Modal -->
+  <div class="modal-overlay" id="modal-air">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-air')">✕</button>
+      <div class="modal-icon">✈️</div>
+      <h3 class="modal-title">Air Tickets</h3>
+      <p class="modal-sub">Fill the details — we'll get you the best fares.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'air')">
+        <div class="mform-row">
+          <input type="text" id="a-name" placeholder="Full Name" required />
+          <input type="tel" id="a-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="a-from" placeholder="From City / Airport" required />
+          <input type="text" id="a-to" placeholder="To City / Airport" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="a-depart" required title="Departure Date" />
+          <input type="date" id="a-return" title="Return Date (optional)" />
+        </div>
+        <div class="mform-row">
+          <input type="number" id="a-persons" placeholder="No. of Passengers" min="1" required />
+          <select id="a-class" required>
+            <option value="" disabled selected>Travel Class</option>
+            <option>Economy</option>
+            <option>Premium Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+          </select>
+        </div>
+        <textarea id="a-notes" placeholder="Preferred airline or other details..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-air"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Train Tickets Modal -->
+  <div class="modal-overlay" id="modal-train">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-train')">✕</button>
+      <div class="modal-icon">🚆</div>
+      <h3 class="modal-title">Train Tickets</h3>
+      <p class="modal-sub">Fill the details — we'll handle your train booking.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'train')">
+        <div class="mform-row">
+          <input type="text" id="tr-name" placeholder="Full Name" required />
+          <input type="tel" id="tr-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="tr-from" placeholder="From Station" required />
+          <input type="text" id="tr-to" placeholder="To Station" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="tr-date" required title="Journey Date" />
+          <input type="number" id="tr-pass" placeholder="No. of Passengers" min="1" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="tr-train" placeholder="Train Name / Number (optional)" />
+          <select id="tr-class" required>
+            <option value="" disabled selected>Travel Class</option>
+            <option>Sleeper (SL)</option>
+            <option>3rd AC (3A)</option>
+            <option>2nd AC (2A)</option>
+            <option>1st AC (1A)</option>
+            <option>General</option>
+            <option>Tatkal</option>
+          </select>
+        </div>
+        <textarea id="tr-notes" placeholder="Any special requirements..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-train"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Volvo Tickets Modal -->
+  <div class="modal-overlay" id="modal-volvo">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-volvo')">✕</button>
+      <div class="modal-icon">🚍</div>
+      <h3 class="modal-title">Volvo Tickets</h3>
+      <p class="modal-sub">Fill the details — we'll book your Volvo seats.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'volvo')">
+        <div class="mform-row">
+          <input type="text" id="v-name" placeholder="Full Name" required />
+          <input type="tel" id="v-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="text" id="v-from" placeholder="From City" required />
+          <input type="text" id="v-to" placeholder="To City" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="v-date" required title="Travel Date" />
+          <input type="number" id="v-seats" placeholder="No. of Seats" min="1" required />
+        </div>
+        <select id="v-type" required>
+          <option value="" disabled selected>Seat Type</option>
+          <option>AC Seater</option>
+          <option>AC Sleeper (Lower)</option>
+          <option>AC Sleeper (Upper)</option>
+          <option>Semi-Sleeper</option>
+        </select>
+        <textarea id="v-notes" placeholder="Bus timing preference or other details..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-volvo"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Corporate Service Modal -->
+  <div class="modal-overlay" id="modal-corp">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-corp')">✕</button>
+      <div class="modal-icon">💼</div>
+      <h3 class="modal-title">Corporate Service</h3>
+      <p class="modal-sub">Fill the details — we'll design your corporate travel plan.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'corp')">
+        <div class="mform-row">
+          <input type="text" id="co-name" placeholder="Name" required />
+          <input type="tel" id="co-phone" placeholder="Phone Number" required />
+        </div>
+        <textarea id="co-req" placeholder="Requirement (e.g. daily employee pickup, fleet for event)..." rows="2"
+          required></textarea>
+        <input type="text" id="co-budget" placeholder="Estimated Budget" />
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Enquiry on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-corp"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Car Rental Modal -->
+  <div class="modal-overlay" id="modal-car">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-car')">✕</button>
+      <div class="modal-icon">🚘</div>
+      <h3 class="modal-title">Car Rental</h3>
+      <p class="modal-sub">Fill the details — we'll confirm your car on WhatsApp.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'car')">
+        <div class="mform-row">
+          <input type="text" id="cr-name" placeholder="Full Name" required />
+          <input type="tel" id="cr-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="cr-start" required title="Start Date" />
+          <input type="number" id="cr-days" placeholder="No. of Days" min="1" required />
+        </div>
+        <div class="mform-row">
+          <select id="cr-type" required>
+            <option value="" disabled selected>Car Type</option>
+            <option>Hatchback</option>
+            <option>Sedan</option>
+            <option>SUV</option>
+          </select>
+          <select id="cr-drive" required>
+            <option value="" disabled selected>Drive Type</option>
+            <option>Self Drive</option>
+            <option>With Driver</option>
+          </select>
+        </div>
+        <textarea id="cr-notes" placeholder="Any specific model or details..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-car"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bike Rental Modal -->
+  <div class="modal-overlay" id="modal-bike">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('modal-bike')">✕</button>
+      <div class="modal-icon">🛵</div>
+      <h3 class="modal-title">Bike Rental</h3>
+      <p class="modal-sub">Fill the details — we'll confirm your two-wheeler on WhatsApp.</p>
+      <form class="modal-form" onsubmit="sendWA(event,'bike')">
+        <div class="mform-row">
+          <input type="text" id="b-name" placeholder="Full Name" required />
+          <input type="tel" id="b-phone" placeholder="Phone Number" required />
+        </div>
+        <div class="mform-row">
+          <input type="date" id="b-start" required title="Start Date" />
+          <input type="number" id="b-days" placeholder="No. of Days" min="1" required />
+        </div>
+        <select id="b-type" required style="width:100%; margin-bottom: 15px;">
+          <option value="" disabled selected>Vehicle Type</option>
+          <option>Scooty</option>
+          <option>Bike</option>
+          <option>Cruiser</option>
+        </select>
+        <textarea id="b-notes" placeholder="Any specific model or details..." rows="2"></textarea>
+        <button type="submit" class="btn btn-primary btn-full modal-submit">📲 Send Booking on WhatsApp</button>
+      </form>
+      <div class="modal-success" id="succ-bike"><span>🎉</span>
+        <p>Sent! We'll reach you on WhatsApp shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL SCRIPTS ===== -->
+  <script>
+    /* Open modal */
+    function openModal(id) {
+      document.getElementById(id).style.opacity = '1';
+      document.getElementById(id).style.pointerEvents = 'all';
+      document.getElementById(id).style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    /* Close modal */
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    /* Click outside closes */
+    document.querySelectorAll('.modal-overlay').forEach(function (m) {
+      m.addEventListener('click', function (e) {
+        if (e.target === m) closeModal(m.id);
+      });
+    });
+    /* ESC closes */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay').forEach(function (m) {
+          m.style.display = 'none';
+        });
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* Build WhatsApp message and send */
+    function sendWA(e, type) {
+      e.preventDefault();
+      var msg = '', num = '919899204769';
+
+      if (type === 'hotel') {
+        msg = '🏨 *Hotel Booking Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('h-name') + '\n'
+          + '📞 Phone: ' + v('h-phone') + '\n'
+          + '🏙 City/Hotel: ' + v('h-city') + '\n'
+          + '👥 Persons: ' + v('h-persons') + '\n'
+          + '📅 Check-in: ' + v('h-checkin') + '\n'
+          + '📅 Check-out: ' + v('h-checkout') + '\n'
+          + '🛏 Rooms: ' + v('h-rooms') + '\n'
+          + '🏷 Room Type: ' + v('h-type') + '\n'
+          + (v('h-notes') ? '💬 Notes: ' + v('h-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'taxi') {
+        msg = '🚕 *Taxi Booking Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('t-name') + '\n'
+          + '📞 Phone: ' + v('t-phone') + '\n'
+          + '📍 Pickup: ' + v('t-from') + '\n'
+          + '🏁 Drop: ' + v('t-to') + '\n'
+          + '📅 Date: ' + v('t-date') + '\n'
+          + '🕐 Time: ' + v('t-time') + '\n'
+          + '👥 Passengers: ' + v('t-persons') + '\n'
+          + '🚗 Cab Type: ' + v('t-type') + '\n'
+          + (v('t-notes') ? '💬 Notes: ' + v('t-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'tour') {
+        msg = '🗺️ *Tour Package Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('tp-name') + '\n'
+          + '📞 Phone: ' + v('tp-phone') + '\n'
+          + '🏔 Destination: ' + v('tp-dest') + '\n'
+          + '👥 Persons: ' + v('tp-persons') + '\n'
+          + '📅 Travel Date: ' + v('tp-date') + '\n'
+          + '📆 No. of Days: ' + v('tp-days') + '\n'
+          + '📦 Package Type: ' + v('tp-type') + '\n'
+          + (v('tp-notes') ? '💬 Notes: ' + v('tp-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'coach') {
+        msg = '🚌 *Luxury Coach Booking*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('c-name') + '\n'
+          + '📞 Phone: ' + v('c-phone') + '\n'
+          + '🚏 From: ' + v('c-from') + '\n'
+          + '🏁 To: ' + v('c-to') + '\n'
+          + '📅 Date: ' + v('c-date') + '\n'
+          + '💺 Seats: ' + v('c-seats') + '\n'
+          + '🚌 Coach Type: ' + v('c-type') + '\n'
+          + (v('c-notes') ? '💬 Notes: ' + v('c-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'air') {
+        msg = '✈️ *Air Ticket Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('a-name') + '\n'
+          + '📞 Phone: ' + v('a-phone') + '\n'
+          + '🛫 From: ' + v('a-from') + '\n'
+          + '🛬 To: ' + v('a-to') + '\n'
+          + '📅 Departure: ' + v('a-depart') + '\n'
+          + (v('a-return') ? '📅 Return: ' + v('a-return') + '\n' : '')
+          + '👥 Passengers: ' + v('a-persons') + '\n'
+          + '💺 Class: ' + v('a-class') + '\n'
+          + (v('a-notes') ? '💬 Notes: ' + v('a-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'train') {
+        msg = '🚆 *Train Ticket Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('tr-name') + '\n'
+          + '📞 Phone: ' + v('tr-phone') + '\n'
+          + '🚉 From: ' + v('tr-from') + '\n'
+          + '🚉 To: ' + v('tr-to') + '\n'
+          + '📅 Date: ' + v('tr-date') + '\n'
+          + '👥 Passengers: ' + v('tr-pass') + '\n'
+          + (v('tr-train') ? '🚂 Train: ' + v('tr-train') + '\n' : '')
+          + '💺 Class: ' + v('tr-class') + '\n'
+          + (v('tr-notes') ? '💬 Notes: ' + v('tr-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'volvo') {
+        msg = '🚍 *Volvo Ticket Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('v-name') + '\n'
+          + '📞 Phone: ' + v('v-phone') + '\n'
+          + '🚏 From: ' + v('v-from') + '\n'
+          + '🏁 To: ' + v('v-to') + '\n'
+          + '📅 Date: ' + v('v-date') + '\n'
+          + '💺 Seats: ' + v('v-seats') + '\n'
+          + '🛋 Seat Type: ' + v('v-type') + '\n'
+          + (v('v-notes') ? '💬 Notes: ' + v('v-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'corp') {
+        msg = '💼 *Corporate Service Enquiry*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('co-name') + '\n'
+          + '📞 Phone: ' + v('co-phone') + '\n'
+          + '📝 Requirement: ' + v('co-req') + '\n'
+          + (v('co-budget') ? '💰 Budget: ' + v('co-budget') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'car') {
+        msg = '🚘 *Car Rental Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('cr-name') + '\n'
+          + '📞 Phone: ' + v('cr-phone') + '\n'
+          + '📅 Start Date: ' + v('cr-start') + '\n'
+          + '📆 Duration: ' + v('cr-days') + ' Days\n'
+          + '🚗 Car Type: ' + v('cr-type') + '\n'
+          + '🚘 Drive Mode: ' + v('cr-drive') + '\n'
+          + (v('cr-notes') ? '💬 Notes: ' + v('cr-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+      else if (type === 'bike') {
+        msg = '🛵 *Bike Rental Request*\n*Patel Tour And Travel*\n\n'
+          + '👤 Name: ' + v('b-name') + '\n'
+          + '📞 Phone: ' + v('b-phone') + '\n'
+          + '📅 Start Date: ' + v('b-start') + '\n'
+          + '📆 Duration: ' + v('b-days') + ' Days\n'
+          + '🛵 Vehicle: ' + v('b-type') + '\n'
+          + (v('b-notes') ? '💬 Notes: ' + v('b-notes') + '\n' : '')
+          + '\n📍 Near University, Mussoorie Road, Dehradun';
+      }
+
+      /* Show success and open WhatsApp */
+      var formEl = e.target;
+      var succId = 'succ-' + type;
+      var modalId = 'modal-' + type;
+      formEl.style.display = 'none';
+      document.getElementById(succId).classList.add('show');
+      setTimeout(function () {
+        window.open('https://wa.me/' + num + '?text=' + encodeURIComponent(msg), '_blank');
+      }, 400);
+    }
+
+    /* Helper: get element value */
+    function v(id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    }
+  </script>
 
   <!-- Explore Section -->
   <section class="explore-section">

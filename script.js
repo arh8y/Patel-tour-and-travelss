@@ -275,3 +275,15 @@ document.querySelectorAll('.info-card').forEach((card, i) => {
 
 console.log('%c🏍 Patel Tour And Travel – Ride Dehradun!', 'color: #6c63ff; font-size: 20px; font-weight: bold;');
 console.log('%cExplore Uttarakhand in style.', 'color: #00d4ff; font-size: 13px;');
+
+/* Stagger service cards reveal */
+document.querySelectorAll('.service-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.06}s`;
+  revealObserver.observe(card);
+});
+
+/* Stagger service cards reveal */
+document.querySelectorAll('.service-card').forEach((card, i) => {
+  card.style.transitionDelay = `${i * 0.06}s`;
+  revealObserver.observe(card);
+});

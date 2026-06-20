@@ -1203,3 +1203,102 @@ body { animation: pageLoad 0.6s ease forwards; }
   .extra-row { grid-template-columns: 1fr; }
   .modal-box { padding: 30px 22px 28px; }
 }
+
+/* Reviews Section */
+.reviews-section {
+  padding: 100px 5%;
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+}
+.reviews-section::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: var(--accent1);
+  filter: blur(150px);
+  opacity: 0.25;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.reviews-section::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: var(--accent2);
+  filter: blur(150px);
+  opacity: 0.2;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.reviews-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.review-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.35s, border-color 0.35s, background 0.35s;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+.review-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-5px);
+}
+.review-stars {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.review-text {
+  font-family: var(--font2);
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent1), var(--accent2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.author-info strong {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.author-info span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}

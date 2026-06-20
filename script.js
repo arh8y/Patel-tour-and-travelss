@@ -3,45 +3,8 @@
    Animations, Cursor, Scroll Effects
    ============================================ */
 
-/* ---- Custom Cursor ---- */
-const cursor = document.getElementById('cursor');
-const cursorFollower = document.getElementById('cursorFollower');
-let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
 
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-  cursor.style.left = mouseX + 'px';
-  cursor.style.top  = mouseY + 'px';
-});
 
-function animateFollower() {
-  followerX += (mouseX - followerX) * 0.12;
-  followerY += (mouseY - followerY) * 0.12;
-  cursorFollower.style.left = followerX + 'px';
-  cursorFollower.style.top  = followerY + 'px';
-  requestAnimationFrame(animateFollower);
-}
-animateFollower();
-
-// Cursor expand on interactive elements
-document.querySelectorAll('a, button, .dest-card, .spec, .info-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.width  = '20px';
-    cursor.style.height = '20px';
-    cursorFollower.style.width  = '50px';
-    cursorFollower.style.height = '50px';
-    cursorFollower.style.borderColor = 'var(--accent2)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.width  = '12px';
-    cursor.style.height = '12px';
-    cursorFollower.style.width  = '36px';
-    cursorFollower.style.height = '36px';
-    cursorFollower.style.borderColor = 'var(--accent1)';
-  });
-});
 
 /* ---- Navbar Scroll ---- */
 const navbar = document.getElementById('navbar');

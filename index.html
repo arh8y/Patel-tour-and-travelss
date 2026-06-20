@@ -224,8 +224,14 @@
           <input type="number" id="h-persons" placeholder="No. of Persons" min="1" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="h-checkin" required title="Check-in Date" />
-          <input type="date" id="h-checkout" required title="Check-out Date" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Check-in Date</label>
+            <input type="date" id="h-checkin" required />
+          </div>
+          <div class="mfield">
+            <label class="mfield-label">📅 Check-out Date</label>
+            <input type="date" id="h-checkout" required />
+          </div>
         </div>
         <div class="mform-row">
           <input type="number" id="h-rooms" placeholder="No. of Rooms" min="1" required />
@@ -263,8 +269,14 @@
           <input type="text" id="t-to" placeholder="Drop Location" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="t-date" required title="Travel Date" />
-          <input type="time" id="t-time" required title="Pickup Time" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Travel Date</label>
+            <input type="date" id="t-date" required />
+          </div>
+          <div class="mfield">
+            <label class="mfield-label">🕐 Pickup Time</label>
+            <input type="time" id="t-time" required />
+          </div>
         </div>
         <div class="mform-row">
           <input type="number" id="t-persons" placeholder="No. of Passengers" min="1" required />
@@ -302,7 +314,10 @@
           <input type="number" id="tp-persons" placeholder="No. of Persons" min="1" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="tp-date" required title="Travel Date" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Travel Date</label>
+            <input type="date" id="tp-date" required />
+          </div>
           <input type="number" id="tp-days" placeholder="No. of Days" min="1" required />
         </div>
         <select id="tp-type" required style="width:100%;margin-bottom:0">
@@ -340,7 +355,10 @@
           <input type="text" id="c-to" placeholder="To City" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="c-date" required title="Travel Date" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Travel Date</label>
+            <input type="date" id="c-date" required />
+          </div>
           <input type="number" id="c-seats" placeholder="No. of Seats" min="1" required />
         </div>
         <select id="c-type" required>
@@ -377,8 +395,14 @@
           <input type="text" id="a-to" placeholder="To City / Airport" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="a-depart" required title="Departure Date" />
-          <input type="date" id="a-return" title="Return Date (optional)" />
+          <div class="mfield">
+            <label class="mfield-label">✈️ Departure Date</label>
+            <input type="date" id="a-depart" required />
+          </div>
+          <div class="mfield">
+            <label class="mfield-label">🔁 Return Date (optional)</label>
+            <input type="date" id="a-return" />
+          </div>
         </div>
         <div class="mform-row">
           <input type="number" id="a-persons" placeholder="No. of Passengers" min="1" required />
@@ -416,7 +440,10 @@
           <input type="text" id="tr-to" placeholder="To Station" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="tr-date" required title="Journey Date" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Journey Date</label>
+            <input type="date" id="tr-date" required />
+          </div>
           <input type="number" id="tr-pass" placeholder="No. of Passengers" min="1" required />
         </div>
         <div class="mform-row">
@@ -457,7 +484,10 @@
           <input type="text" id="v-to" placeholder="To City" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="v-date" required title="Travel Date" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Travel Date</label>
+            <input type="date" id="v-date" required />
+          </div>
           <input type="number" id="v-seats" placeholder="No. of Seats" min="1" required />
         </div>
         <select id="v-type" required>
@@ -512,7 +542,10 @@
           <input type="tel" id="cr-phone" placeholder="Phone Number" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="cr-start" required title="Start Date" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Start Date</label>
+            <input type="date" id="cr-start" required />
+          </div>
           <input type="number" id="cr-days" placeholder="No. of Days" min="1" required />
         </div>
         <div class="mform-row">
@@ -550,7 +583,10 @@
           <input type="tel" id="b-phone" placeholder="Phone Number" required />
         </div>
         <div class="mform-row">
-          <input type="date" id="b-start" required title="Start Date" />
+          <div class="mfield">
+            <label class="mfield-label">📅 Start Date</label>
+            <input type="date" id="b-start" required />
+          </div>
           <input type="number" id="b-days" placeholder="No. of Days" min="1" required />
         </div>
         <select id="b-type" required style="width:100%; margin-bottom: 15px;">
